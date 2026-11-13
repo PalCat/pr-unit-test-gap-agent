@@ -1,0 +1,11 @@
+# Coverage tool settings: shared by local runs and CI.
+# (The changed-lines threshold lives in scripts/check_gap.sh via COVERAGE_THRESHOLD.)
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
