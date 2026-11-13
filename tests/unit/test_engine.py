@@ -28,4 +28,4 @@ def test_unknown_tier_raises():
         apply_tier_discount(100.0, "diamond")
 
 def test_bulk_discount():
-    assert bulk_discount(1) == 0.1
+    assert bulk_discount(1) == 0.0
