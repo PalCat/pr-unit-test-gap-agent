@@ -75,3 +75,8 @@ def calculate_order_total(items, tier="standard", coupon=None, country="US", tod
         amount = apply_coupon(amount, coupon, today)
     amount += calculate_shipping(amount, country)
     return round(amount, 2)
+
+def bulk_discount(quantity):
+    if quantity >= 10:
+        return 0.1
+    return 0.0
