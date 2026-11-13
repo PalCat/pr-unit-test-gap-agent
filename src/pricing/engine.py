@@ -26,6 +26,7 @@ def calculate_subtotal(items):
         if not isinstance(qty, int) or qty < 1:
             raise ValueError("quantity must be an integer >= 1")
         total += price * qty
+        #adding comment to create a PR without change required for unit tests
     return round(total, 2)
 
 
