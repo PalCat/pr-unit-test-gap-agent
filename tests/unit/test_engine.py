@@ -4,6 +4,7 @@ import pytest
 from src.pricing.engine import (
     apply_tier_discount,
     calculate_subtotal,
+    bulk_discount,
 )
 
 
@@ -25,3 +26,6 @@ def test_tier_discount(tier, expected):
 def test_unknown_tier_raises():
     with pytest.raises(ValueError):
         apply_tier_discount(100.0, "diamond")
+
+def test_bulk_discount():
+    assert bulk_discount(1) == 0.1
